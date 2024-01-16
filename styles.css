@@ -1,0 +1,19 @@
+
+h2 {
+    font-family: monospace;
+    font-size: 3em;
+}
+
+.accent {
+    max-height: 15em;
+    color: rgb(4, 144, 88);
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    opacity: .2;
+    z-index: -9;
+    mix-blend-mode: hard-light;
+}
+
+/* Without the dot, it would be interpreted as an element selector. For example, div as a selector targets all div elements, while .example targets all elements with the class "example."*/
+
