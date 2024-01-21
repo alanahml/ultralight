@@ -1,4 +1,54 @@
 
+@font-face {
+    font-family: Neue Haas Grotesk Display Pro;
+    src: url(./assets/NeueHaasDisplayRoman.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: Neue Montreal;
+    src: url(./assets/NeueMontreal-Medium.otf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Neue Montreal;
+    src: url(./assets/NeueMontreal-Regular.otf);
+    font-weight: 400;
+}
+h3, h4, h5 {
+    font-family: Neue Montreal;
+    font-weight: 500;
+}
+a {
+    color: rgb(6, 88, 73);
+    text-decoration: none;
+    transition: all ease-in-out 300ms ;
+}
+a:hover {
+    background-color: blue;
+   color: rgb(171, 165, 255);
+   filter: blur(1px);
+    letter-spacing: 1.2px;
+    text-decoration: dotted;
+}
+
+
+
+.mono {
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 1em;
+    display: inline;
+}
+
+.p {
+    font-family: Neue Montreal;
+    font-weight: 400;
+    font-size: 1em;
+    display: inline;
+}
+
+
 h2 {
     font-family: monospace;
     font-size: 3em;
@@ -15,5 +65,162 @@ h2 {
     mix-blend-mode: hard-light;
 }
 
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+
+}
+
+.preview {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    pointer-events: none;
+    transform-origin: center;
+    z-index: 2;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    background: url(./assets/butterfly.png);
+    background-size: cover;
+    background-position: 0 0;
+    pointer-events: none;
+}
+
+.about-item {
+    border: 1 px dotted blanchedalmond;
+}
+
+#title-text {
+    display: inline;
+    width: auto;
+    font-family: Neue Montreal;
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.verticalWrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+#yvr {
+    font-family: Neue Montreal;
+    font-size: 8em;
+    font-weight: 500;
+}
+
+#etc {
+    font-family: Neue Haas Grotesk Display Pro;
+    font-weight: 400;
+    font-size: 5em;
+    line-height: 1em;
+    text-align: end;
+}
+
+.dot {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+    width: 1em;
+    height: 1em;
+    color: black 0;
+    border-radius: 100%;
+}
+
+
+.dot:hover {
+    background-color:rgb(47, 255, 137);
+    border-style: dotted;
+    color: black;
+}
+
+/*
+.guide-item {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1fr;
+    border-collapse: collapse;
+    border: 1px solid black;
+
+}
+*/
+
+table {
+    width: 100%;
+    margin-top: 2em;
+    padding-left: 1em;
+ 
+}
+
+
+#guide-items  {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 8px;
+    font-family: Neue Haas Grotesk Display Pro;
+    
+}
+
+#guide-items th {
+    font-size: 1em;
+    padding: 12px;
+    border: none;
+
+}
+
+#guide-items tr {
+    transition: all ease-in-out 300ms;
+}
+
+
+#guide-items  td{
+    font-size: 1.5em;
+    border: 1px solid black;
+    padding: 12px;
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+#guide-items tr:hover {
+    background-color: aliceblue;
+    border-style: dotted;
+  
+}
+
+.border-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px black;
+    border-style: solid;
+    border-radius: 8em;
+    padding: .2em 1.25em;
+    vertical-align: baseline;
+}
+
+.yvr-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    margin-top: -1.5em;
+}
+
+.wrapper {
+    width: 96vw;
+    margin: 0 auto;
+}
 /* Without the dot, it would be interpreted as an element selector. For example, div as a selector targets all div elements, while .example targets all elements with the class "example."*/
 
