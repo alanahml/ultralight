@@ -32,7 +32,12 @@ a:hover {
     text-decoration: dotted;
 }
 
+img {
+    border-radius: 1em;
+    width: 100%;
+    height: auto;
 
+}
 
 .mono {
     font-family: monospace;
@@ -97,7 +102,7 @@ h2 {
     border: 1 px dotted blanchedalmond;
 }
 
-#title-text {
+.title-text {
     display: inline;
     width: auto;
     font-family: Neue Montreal;
@@ -106,6 +111,7 @@ h2 {
 }
 
 .verticalWrapper {
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -176,6 +182,7 @@ table {
     font-size: 1em;
     padding: 12px;
     border: none;
+    background-color: none;
 
 }
 
@@ -185,12 +192,10 @@ table {
 
 
 #guide-items  td{
-    font-size: 1.5em;
+    font-size: 1em;
     border: 1px solid black;
-    padding: 12px;
-    padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
+    padding: 20px;
+    text-align: left;
 }
 
 #guide-items tr:hover {
@@ -198,6 +203,8 @@ table {
     border-style: dotted;
   
 }
+
+
 
 .border-pill {
     display: flex;
