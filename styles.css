@@ -21,6 +21,34 @@
     position: relative;
     padding: 4em;
 }
+
+.thoughtWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+}
+
+input {
+    padding: 16px;
+    background-color: blue;
+    color: #0aa588;
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 1.5em;
+
+}
+
+#thought {
+    display: flex;
+    flex-direction: column;
+    border: dotted 3px rgb(8, 202, 89);
+    background-color: none;
+    width: 10em;
+    height: 5em;
+
+}
+
 body {
     position: relative;
     min-height: 100%;
@@ -50,6 +78,11 @@ button {
 h1 {
     font-family: Neue Haas Grotesk Display Pro;
     font-size: 8em;
+    color: black;
+}
+h3 {
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 4em;
     color: black;
 }
 #nav {
