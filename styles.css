@@ -15,10 +15,103 @@
     src: url(./assets/NeueMontreal-Regular.otf);
     font-weight: 400;
 }
+
+#contentWrapper {
+    display: block;
+    position: relative;
+    padding: 4em;
+}
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #84abfd;
+    /* background: url(./assets/bg.JPG); */
+    background-position: center center;
+    background-size: cover;
+  }
+.weatherHome {
+    background-color: #0aa588;
+}
+
+button {
+    box-shadow: 2px 2px 1.5px 1px rgba(236, 236, 236, 0.55) inset;
+    background-color: #0aa588;
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    
+}
+
+h1 {
+    font-family: Neue Haas Grotesk Display Pro;
+    font-size: 8em;
+    color: black;
+}
+#nav {
+    display: none;
+    gap: 8px;
+    width: 12em;
+    height: auto;
+    position: sticky;
+    padding: 1em;
+    top: 0px;
+    left: 5em;
+    border: dotted 2px grey;
+    background-color:rgba(201, 76, 76, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+}
+
+.title {
+    font-family: Neue Haas Grotesk Display Pro;
+    font-weight: 400;
+    font-size: 20em;
+    color: rgb(5, 63, 255);
+    max-width: 100vw;
+    filter: drop-shadow(0px 4px 12.5px #4680F7);
+    mix-blend-mode: hard-light;
+
+}
+
 h3, h4, h5 {
     font-family: Neue Montreal;
     font-weight: 500;
 }
+
+.sun {
+    background: rgb(246,255,112);
+    background: linear-gradient(180deg, rgba(246,255,112,1) 0%, rgba(255,255,255,1) 50%, rgba(219,219,219,1) 100%);
+    color: black;
+  
+  }
+  
+  .rain {
+    background: rgb(0,39,182);
+    background: linear-gradient(180deg, rgba(0,39,182,1) 0%, rgba(0,0,0,1) 50%, rgba(89,89,89,1) 100%);
+    color: white;
+  }
+
+.emoji {
+    font-size: 6em;
+    max-width: 40%;
+}
+
+.emoji:hover {
+    
+   filter: drop-shadow (0px 4px 28.1px 4px rgba(0, 0, 0, 0.40));
+}
+
+.emojiWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
 a {
     color: rgb(6, 88, 73);
     text-decoration: none;
@@ -117,6 +210,13 @@ h2 {
     width: auto;
 }
 
+.spaces {
+    background-image: url(./assets/spaces.svg);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 #yvr {
     font-family: Neue Montreal;
     font-size: 8em;
@@ -204,7 +304,62 @@ table {
   
 }
 
+.switch {
+    position: absolute;
+    display: inline-block;
+    margin: 4em;
+    right: 1em;
+    width: 60px;
+    height: 34px;
+    z-index: 2;
+}
 
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #0036ab;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
 
 .border-pill {
     display: flex;
@@ -229,5 +384,16 @@ table {
     width: 96vw;
     margin: 0 auto;
 }
+
+canvas {
+    position: fixed !important;
+    mix-blend-mode: overlay;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    /* z-index: 1;  */
+   
+  }
 /* Without the dot, it would be interpreted as an element selector. For example, div as a selector targets all div elements, while .example targets all elements with the class "example."*/
 

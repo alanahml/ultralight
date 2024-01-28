@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather Home</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="weatherapi.js"></script>
+</head>
+
+<body class="weatherHome">
+    <a href="index.html" class="title-text" style="position: fixed; right: 1em; margin-top: 1em;">back home</a>
+    <span class="title">Shall we check the <i>weather?</i></span>
+    <p>This build was inspired by <a href="https://weathergradient.com/">this site that creates a gradient based on the weather</a>
+    </p>
+
+    <div class="message">
+        We are <span id="status">...</span><br>
+
+        Currently: <time id="now">...</time>, Sunset: <time id="dusk">...</time><br>
+        Open: <time id="bloom">...</time>, Close: <time id="close">...</time><br>
+
+        Current temperature: <time id="temp">...</time>
+    </div>
+
+
+    <div id="rain-message">It's raining</div>
+    <div id="sun-message">It's sunning</div>
+    
+    <h3 id="today">...</h3>
+    <h1>
+    "Today it is"<span class="temp">N degrees</span> "C", with <span class="conditions">a 30% chance of rain</span> "in" <span class="location">Vancouver</span>.
+
+    <div id="clock">...</div>
+
+    </h1>
+    <div class="emojiWrapper">
+        <h2 class="emoji">🏔</h2>
+        <h2 class="emoji">🏖</h2>
+        <h2 class="emoji">🏙</h2>
+        <h2 class="emoji">🏕</h2>
+    </div>
+    
+
+
+    <!-- <script src="rainscript.js"></script> -->
+
+    <div id="rainContainer"></div>
+  
+</body>
+</html>
