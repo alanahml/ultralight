@@ -39,7 +39,7 @@ function getWeatherData(){
 	let lat = 49.2577354;
 	let lon = -123.123904;
 	const appId = 'c61d0b99eb79bef542b8b04858e067e8'; 
-	const	url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}&units=imperial`;
+	const	url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
 	
 	fetch(url)
 		.then(response => response.json())
@@ -96,7 +96,7 @@ function displayData(now, temp, location, weather, country){
 	tempDiv.innerText = temp+'°C';
 
 	let locationDiv = document.getElementById('location');
-	locationDiv.innerText = location + country;
+	locationDiv.innerText = location + ', ' + country;
 
 }
 
