@@ -71,9 +71,27 @@ function processWeatherData(data){
 	const weather = data.weather[0].description;
 	const location = data.name;
 	const country = data.sys.country;
+	const rain  = data.weather[0].description.includes("rain")
+
 
 	displayData(now, temp, location, weather, country)
+	console.log(weather.includes("rain"))
+
+	function showRain() {
+		var x = document.getElementById("canvas");
+		if (weather.includes(rain)) {
+		x.style.display = "none";
+		} else {
+			x.style.display = "block";
+		}
+	}
+
+	showRain()
 }
+
+
+
+
 
 // 	//add our data into HTML placeholders
 // 	displayData(now, sunsetTime, bloomTime, closeTime, temp)
@@ -107,18 +125,8 @@ function formatDate( date ){
 
 }
 
-function showRain() {
-	
-	var x = document.getElementById("canvas");
-	if (weather === "rain", "light rain") {
-	x.style.display = "none";
-	} else {
-		x.style.display = "block";
-	}
-	
-}
 
-showRain()
+
 // 	let duskDiv = document.getElementById('dusk');
 // 	duskDiv.innerText = formatDate( sunsetTime );
 

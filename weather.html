@@ -11,24 +11,29 @@
 </head>
 
 <body class="weatherHome">
-    <a href="index.html" class="title-text" style="position: fixed; right: 1em; margin-top: 1em;z-index: 99;">back home</a>
-    <span class="mini">Shall we check the <i>weather?</i></span>
-    <p>This build was inspired by <a href="https://weathergradient.com/">this site that creates a gradient based on the weather</a>
-    </p>
-    <div style="font-family:monospace;position: fixed; top: 2em; left: 2em; font-size: 2em;" id="now">It's Now</div>
-
+   
+    <div class="headWrapper">
+    <div class="row">
+        <div style="font-family:monospace; font-size: 2em;" id="now">time</div>
+        <span class="headText">Shall we check the <i>weather?</i></span>
+     </div>
+        <a href="index.html" class="title-text">back home</a>
+    </div>
+    
     <h1>
     Today it is <span id="temp">N degrees</span>, with <i><span id="rain">...</span></i> in <span id="location">...</span>.
-
-
-
     </h1>
+
+
     <div class="emojiWrapper">
-        <h2 class="emoji">🏔</h2>
-        <h2 class="emoji">🏖</h2>
-        <h2 class="emoji">🏙</h2>
-        <h2 class="emoji">🏕</h2>
+        <div class="emojiBox">🏔</div>
+        <div class="emojiBox">🏙</div>
+        <div class="emojiBox">🏕</div>
+        <div class="emojiBox">🏖</div>
     </div>
+
+    <p>This build was inspired by <a href="https://weathergradient.com/">this site that creates a gradient based on the weather</a>
+    </p>
     
 
 

@@ -208,8 +208,6 @@ window.onload = () => {
     }
   })();
 
-//call (execute) the sayHi function
-sayHi();
 }
 
 
