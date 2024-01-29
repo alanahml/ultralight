@@ -62,6 +62,7 @@ body {
 .weatherHome {
     background-color: #0aa588;
     padding: 4em;
+    padding-top: 6em;
 }
 
 button {

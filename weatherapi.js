@@ -39,7 +39,7 @@ function getWeatherData(){
 	let lat = 49.2577354;
 	let lon = -123.123904;
 	const appId = 'c61d0b99eb79bef542b8b04858e067e8'; 
-	const	url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
+	const	url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}&units=metric`;
 	
 	fetch(url)
 		.then(response => response.json())
@@ -107,7 +107,18 @@ function formatDate( date ){
 
 }
 
+function showRain() {
+	
+	var x = document.getElementById("canvas");
+	if (weather === "rain", "light rain") {
+	x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+	
+}
 
+showRain()
 // 	let duskDiv = document.getElementById('dusk');
 // 	duskDiv.innerText = formatDate( sunsetTime );
 
