@@ -44,6 +44,7 @@ function getWeatherData(){
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
+			console.log({weatherData: data })
 			if( data.cod == '404' ){
 				//error in getting data, display error
 				console.log( data.message );
@@ -78,15 +79,18 @@ function processWeatherData(data){
 	console.log(weather.includes("rain"))
 
 	function showRain() {
-		var x = document.getElementById("canvas");
-		if (weather.includes(rain)) {
-		x.style.display = "none";
+		var x = document.querySelector("canvas");
+		console.log({x})
+		if (rain) {
+		x.style.display = "block";
 		} else {
-			x.style.display = "block";
+			x.style.display = "none";
 		}
+		
 	}
 
 	showRain()
+	
 }
 
 
